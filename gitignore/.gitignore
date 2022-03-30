@@ -1,0 +1,42 @@
+# System-dependent autogen file
+.DS_Store
+desktop.ini
+
+# Build outputs
+.gradle
+build
+out
+bin
+
+# IDE specific files
+.idea
+.project
+
+
+# 기본은 위에 것까지. 
+# 추가적으로 자동 생성되는 것들을 써주면 된다.
+# build number 자동 생성되는 파일들이라던지.
+build_number.properties
+api-main/src/main/resources/build_api-main.json
+
+# Applicatoin config 도 원래 올리지 않는 건가?
+/application.yml
+
+
+
+# 이건 좀 디테일하긴 한데 이해할 수 없는 부분인데 설로인 샌드박스 코드 보면 idea 폴더에 gitignore를 따로 만들었네.
+# 근데 .idea를 하면 자동으로 올라가지 않는거 아닌가? 이렇게 따로 만든 이유는 뭘까?
+# 이렇게 만들 수도 있다는 걸 보여주는 용일까? 
+# 이거 내가 만든 파일 보는데ㅋㅋㅋㅋㅋ 그냥 자동 생성된 거였음!!! 모야!!! 나는 따로 의도한 건 줄 알았자나!!!
+
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Editor-based HTTP Client requests
+/httpRequests/
+
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
