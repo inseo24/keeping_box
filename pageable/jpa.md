@@ -4,7 +4,7 @@ offset 방식이라 데이터가 많아지면 엄청 비효율적이게 된다.
 
 하지만 데이터가 많지 않으면 그냥저냥 무난히 쓰기 좋음.(mysql이 알잘딱깔센 일을 해주니까)
 
-데이터가 많으면 no offset 방식을 생각하면서 paging 성능 쿼리를 좀 더 고민해보는 걸로 하고
+데이터가 많으면 no offset 방식과 함께 paging 성능 쿼리를 좀 더 고민해보는 걸로 하고
 
 일단 pageable 도 잘 몰라서 발생했던 오늘의 문제
 
@@ -34,7 +34,7 @@ override fun getList(userId: Long, pageable: Pageable): PageImpl<PostListRespons
 @Transactional(readOnly = true)
 override fun getList(userId: Long, pageable: Pageable): Page<PostListResponse> {
     return@getList port.getPostList(userId, pageable).map {
-            Response(it.id, it.createdAt, ... ))
+            Response(it.id, it.createdAt, ... )
     }
 }
 ```
