@@ -9,6 +9,8 @@ offset 방식이라 데이터가 많아지면 엄청 비효율적이게 된다. 
 일단 pageable 도 잘 몰라서 발생했던 오늘의 문제
 
 
+1번 
+
 ```kotlin
 @Transactional(readOnly = true)
 override fun getList(userId: Long, pageable: Pageable): PageImpl<PostListResponse> {
@@ -28,7 +30,7 @@ override fun getList(userId: Long, pageable: Pageable): PageImpl<PostListRespons
 
 원래는 querydsl에서 PageImpl로 fetchResults()로 받아서 PageImpl 이었는데 이게 deprecated 되서 나중에 수정하면서 리턴 데이터를 Page로 변경했다.
 
-
+2번
 
 ```kotlin
 @Transactional(readOnly = true)
@@ -56,3 +58,9 @@ override fun getList(userId: Long, pageable: Pageable): Page<PostListResponse> {
 - offset vs no-offset
 
 등등이 있겠다. 
+
+
+
++) 아 저런 로직을 썼던 이유를 안썼네
+
+이걸 이렇게 썼던 이유는 port에서 리턴되는 데이터를 변경해서 리턴해야 했기 때문이다. 
