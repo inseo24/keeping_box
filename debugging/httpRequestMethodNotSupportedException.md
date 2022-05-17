@@ -24,3 +24,16 @@ org.springframework.web.HttpRequestMethodNotSupportedException: Request method '
 
 
 아직도 모르겠다 2번 아닐까? 싶긴 하다.
+
+
+알게됐다. 포스트맨 진짜 불친절한 것 
+
+혹시나 해서 Advanced REST Client라는 크롬 확장 프로그램을 설치해서 요청을 해보니까 301 http 코드가 떨어졌다.
+
+그걸 보고 설마?! 했더니 https로 해야 하는 걸 http로 요청하고 있었다는 걸 알게 됐다.
+
+이게 근데 화가 나는 점이 회사 문서에는 http로 써있어서 아무 의심 없이 가져다 복붙해서 요청했는데 GET은 또 동작하는게 다른 메서드는 막혀있었다 
+
+아 이딴 걸로 고민을 하다니 으아악
+
+하지만 혼자 이유를 알아냈다. 행복해 뿌뜻해 ㅎ.ㅎ
